@@ -10,3 +10,4 @@ Lorenzo Marino
 Mattia Capasso
 Luca De Sio
 Giovanni Ferrante Pietro Vergara
+Domenico Sofia
