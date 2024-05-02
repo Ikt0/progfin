@@ -13,3 +13,4 @@ Giovanni Ferrante Pietro Vergara
 Domenico Sofia
 Gianluca Angiolini
 Dario Accarino
+Alessandro Giorgini 
