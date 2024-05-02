@@ -8,3 +8,4 @@ Prima release del progetto finale del corso di PHP
 Lorenzo Limatola
 Lorenzo Marino
 Mattia Capasso
+Luca De Sio
