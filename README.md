@@ -9,5 +9,7 @@ Lorenzo Limatola
 Lorenzo Marino
 Mattia Capasso
 Luca De Sio
+Giovanni Ferrante Pietro Vergara
+Domenico Sofia
 Gianluca Angiolini
 Dario Accarino
