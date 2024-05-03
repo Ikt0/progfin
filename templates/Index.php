@@ -24,13 +24,15 @@
             </div>
 
             <div class="dropdown-menu">
-                <a href="#"><i class="fa fa-user"></i> Personal Area</a>
-                <a href="#"><i class="fa fa-object-group" aria-hidden="true"></i> My Memes</a>
-                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart</a>
+                <a href="#"><i class="fa fa-user"></i> Area Personale</a>
+                <a href="#"><i class="fa fa-object-group" aria-hidden="true"></i>I miei Memes</a>
                 <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
             </div>
         </div>
     </div>
+<div>
+    <?php include '..\visualizzazione.php';?>
+</div>
 </body>
 
 </html>

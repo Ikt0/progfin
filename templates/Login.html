@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
+    <div class="hamburger-menu">
+        <div class="bordermenu">Menu</div>
+        <div class="dropdown-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</div>
+
+<div class="sec">
+    <h1>Title Above Photo</h1>
+    <img src="photo.jpg" alt="Photo" class="photo">
+    <div class="like-section">
+        <button class="like-button">Like</button>
+        <span class="like-count">0</span>
+    </div>
+    <div class="comment-box">
+        <h2>Comments</h2>
+        <div class="comment">
+            <p>User1: Comment 1</p>
+            <div class="like-section">
+                <button class="like-button">Like</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+        <div class="comment">
+            <p>User2: Comment 2</p>
+            <div class="like-section">
+                <button class="like-button">Like</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+        <!-- More comments can be added here -->
+    </div>
+</div>
+
+<script>
+    // JavaScript for like functionality
+    const likeButtons = document.querySelectorAll('.like-button');
+    likeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const likeCount = button.nextElementSibling;
+            let currentCount = parseInt(likeCount.textContent);
+            likeCount.textContent = ++currentCount;
+        });
+    });
+</script>
+
+</body>
+</html>
