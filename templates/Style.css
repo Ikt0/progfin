@@ -183,14 +183,15 @@ input[type="submit"]:hover {
   grid-gap: 5px;
   color: white;
   padding-top: 20px;
-  background: linear-gradient(135deg, #ff9248, #ff6b6b);
+  background: #2E3035;
 }
 
 .meme {
-  width: 90%;
-  background-color: #333333b7;
+  width: 85%;
+  height: 85%;
+  background-color: #474a51;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 #comment {
