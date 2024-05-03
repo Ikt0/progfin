@@ -17,4 +17,4 @@ Portale di condivisione Memes
 - [@Alessandro Giorgini](https://www.github.com/)
 ## Preview pre-relase 1
 
-![preview](https://i.ibb.co/vx3JcJx/image.png)
+![preview](https://i.ibb.co/nDGfBjY/image.png)
