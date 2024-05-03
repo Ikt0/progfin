@@ -1,0 +1,167 @@
+body {
+    background-color: #383838;
+    margin: 0;
+}
+.header {
+    /* position:fixed;
+    width:100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#3C4F76;
+  }
+  .logo-container
+  {
+    border-radius: 100px;
+   /* background-color: red; */
+    padding:8px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding:7px 20px;
+    width: 30%;
+  }
+  .search-bar input {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    }
+  .search-input {
+    flex:2;
+    width:100%;
+    padding: 5px;
+    border:0px;
+    border-radius: 0px;
+    padding-right: 10px;
+
+  }
+  
+  .search-button {
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 15px;
+    transition: 1s ease;
+    
+    
+  }
+  
+  .search-button:hover {
+    background-color:#dddbf1;
+    color: #3C4F76;
+   transition: 1s ease;
+  }
+  
+  .bordermenu
+  {
+    border-radius: 15px;
+    border: 3px solid transparent;
+    transition: ease 1s;
+    padding: 2.5px 25px;
+    background-color: white;
+  }
+  
+  .bordermenu:hover
+  {
+    background-color:#dddbf1;
+    transition: ease 1s;
+    color:#3C4F76;
+  }
+  
+  .bordermenu p{
+    margin: 5px;
+  }
+  
+  
+  
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 10px;
+    background-color: #dddbf1;
+    border-radius: 15px;
+}
+  
+  .dropdown-menu a {
+    display: block;
+    margin: 5px 0;
+    padding:5px;
+    text-decoration: none;
+    color: #383831;
+  }
+  .hamburger-menu:hover .dropdown-menu {
+    display: block;
+  }
+
+
+  /* CSS dei post */
+  figure {
+    margin: 0;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+#area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    border: 1px solid black;
+}
+
+.border input[type="text"] {
+    border-radius: 15px;
+}
+
+.border form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.border input[type="submit"] {
+    border-radius: 15px;
+    background-color: greenyellow;
+
+}
+
+#like svg:active {
+    background-color: red;
+}
+
+#comment img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#comment {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid black;
+    margin-top: 15px;
+}
+#comment p{
+    margin: 0;
+}
