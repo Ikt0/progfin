@@ -18,7 +18,7 @@ if(isset($_POST["submit"])) {
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  $target_file = $target_dir . rand(1, 1000);
+  $target_file = $target_file . rand(1, 1000) . "." . $imageFileType;
 }
 
 // Check file size
