@@ -1,7 +1,6 @@
 <?php
-$target_dir = "images/";
+$target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$number = 0;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -18,10 +17,8 @@ if(isset($_POST["submit"])) {
 }
 
 // Check if file already exists
-$filename = pathinfo($target_file, PATHINFO_FILENAME);
-while (file_exists($target_file)) {
-  $number++;
-  $target_file = $target_dir . basename($filename) . $number . "." . $imageFileType;
+if (file_exists($target_file)) {
+  $target_file = $target_dir . rand(1, 1000);
 }
 
 // Check file size
@@ -44,31 +41,8 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-    insertInDB()
   } else {
     echo "Sorry, there was an error uploading your file.";
   }
-}
-
-function insertInDB() {
-  $servername = "localhost";
-  $username = "username";
-  $password = "password";
-  $dbname = "myDBPDO";
-
-  try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-    VALUES ('John', 'Doe', 'john@example.com')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "New record created successfully";
-  } catch(PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
-  }
-
-  $conn = null;
 }
 ?>
