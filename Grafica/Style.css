@@ -9,7 +9,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color:#38778B;
+    background-color:#3C4F76;
   }
   .logo-container
   {
@@ -54,8 +54,8 @@ body {
   }
   
   .search-button:hover {
-    background-color:#10ACE0;
-    color: beige;
+    background-color:#dddbf1;
+    color: #3C4F76;
    transition: 1s ease;
   }
   
@@ -70,9 +70,9 @@ body {
   
   .bordermenu:hover
   {
-    background-color:#10ACE0;
+    background-color:#dddbf1;
     transition: ease 1s;
-    color:white;
+    color:#3C4F76;
   }
   
   .bordermenu p{
@@ -86,7 +86,7 @@ body {
     display: none;
     position: absolute;
     right: 10px;
-    background-color: #10ace0;
+    background-color: #dddbf1;
     border-radius: 15px;
 }
   
