@@ -12,7 +12,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 10px;
 }
 
 .logo {
@@ -183,13 +182,15 @@ input[type="submit"]:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5px;
   color: white;
+  padding-top: 20px;
+  background: linear-gradient(135deg, #ff9248, #ff6b6b);
 }
 
 .meme {
   width: 90%;
-  background-color: #333;
+  background-color: #333333b7;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 #comment {
