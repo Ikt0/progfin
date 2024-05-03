@@ -1,6 +1,7 @@
 <?php
 $target_dir = "images/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$number = 0;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -17,8 +18,10 @@ if(isset($_POST["submit"])) {
 }
 
 // Check if file already exists
-if (file_exists($target_file)) {
-  $target_file = $target_file . rand(1, 1000) . "." . $imageFileType;
+$filename = pathinfo($target_file, PATHINFO_FILENAME);
+while (file_exists($target_file)) {
+  $number++;
+  $target_file = $target_dir . basename($filename) . $number . "." . $imageFileType;
 }
 
 // Check file size
