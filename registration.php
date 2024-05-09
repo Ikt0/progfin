@@ -17,11 +17,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
+    // check existing username
+    $stmt = $pdo->prepare("SELECT * FROM utenti WHERE username = ?");
+    $stmt->execute([$username]);
+    $user = $stmt->fetch();
+
+    if ($user) {
+        echo "Existing username";
+        header('Location: '.$_SERVER['REQUEST_URI']);
+        die();
+    }
+
+    // insert
     $stmt = $pdo->prepare("INSERT INTO utenti (nome, password, karma) VALUES (?, ?, 0)");
     $stmt->execute([$username, $password]);
     echo "Registration successful!";
 
-    $_SESSION['user_id'] = $user['id'];
-    $_SESSION['username'] = $user['username'];
-    header("Location: ./templates/index.php");
+    // login to get id
+    $stmt = $pdo->prepare("SELECT * FROM utenti WHERE username = ?");
+    $stmt->execute([$username]);
+    $user = $stmt->fetch();
+
+    // start session
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        echo "Login successful!";
+        header("Location: ./templates/index.php");
+    } else {
+        echo "Invalid username or password";
+    }
 }
