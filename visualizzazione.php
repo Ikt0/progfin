@@ -25,7 +25,7 @@ $conn->select_db("sito_meme");
 
 $queryCount="SELECT COUNT(id_img) FROM immagini";
 $oggettoCount = $conn->query($queryCount);
-$numeroMemes = $oggettoCount['num_rows'];
+$numeroMemes = $oggettoCount->num_rows;
 
 
 var_dump($numeroMemes);
