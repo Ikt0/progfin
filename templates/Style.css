@@ -18,8 +18,6 @@ body {
   max-width: 50%;
   height: auto;
   border-radius:15px;
-  margin-bottom: auto;
-  margin-top: auto;
 }
 
 
@@ -211,4 +209,12 @@ input[type="submit"]:hover {
 .meme img {
   max-width: 100%;
   height: auto;
+}
+input::file-selector-button {
+  font-weight: bold;
+  color: black;
+  padding: 1.5px;
+  background: linear-gradient(135deg, #ff9248, #ff6b6b);
+  border: thin solid grey;
+  border-radius: 3px;
 }
