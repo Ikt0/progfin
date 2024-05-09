@@ -34,14 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Registration successful!";
 
     // login to get id
-    $stmt = $pdo->prepare("SELECT * FROM utenti WHERE username = ?");
+    $stmt = $pdo->prepare("SELECT * FROM utenti WHERE nome = ?");
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
     // start session
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
+        $_SESSION['username'] = $user['nome'];
         echo "Login successful!";
         header("Location: ./templates/index.php");
     } else {
