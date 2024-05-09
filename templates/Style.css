@@ -18,6 +18,7 @@ body {
   max-width: 50%;
   height: auto;
   border-radius:15px;
+margin-right: 0;
 }
 
 
@@ -211,6 +212,16 @@ input[type="submit"]:hover {
   height: auto;
 }
 
+<<<<<<< HEAD
+
+input::file-selector-button {
+  font-weight: bold;
+  color: black;
+  padding: 1.5px;
+  background: linear-gradient(135deg, #ff9248, #ff6b6b);
+  border: thin solid grey;
+  border-radius: 3px;
+=======
 /*footer*/
 footer {
   width: auto;
@@ -221,7 +232,20 @@ footer {
   align-items: center;
 
   justify-content: space-between;
+>>>>>>> 19334bcfe2b029178cd406f7000ed61fc3426a1d
 }
+
+/*footer*/
+footer {
+  width: auto;
+  background-color:#ff6b6b;
+  color: white;
+  text-align: center;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 footer p{
   font-size:30px ;
   transition: 1s ease-in-out;
