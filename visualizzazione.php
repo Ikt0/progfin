@@ -1,7 +1,7 @@
 <?php
 
 $folder = ".\images\\";
-$file = glob($folder . "*.{jpg,jpeg,png,gif}",GLOB_BRACE);
+// $file = glob($folder . "*.{jpg,jpeg,png,gif}",GLOB_BRACE);
 
 //DB
 $servername = "localhost"; // Change this if your MySQL server is on a different host
@@ -23,22 +23,28 @@ if ($conn->connect_error) {
 // Select the database
 $conn->select_db("sito_meme");
 
+$queryCount="SELECT COUNT(id_img) FROM immagini";
+$oggettoCount = $conn->query($queryCount);
+$numeroMemes = $oggettoCount['num_rows'];
 
+
+var_dump($numeroMemes);
 //temporaneo Dati
 // $numeroLikes = 1234; //da cambiare con il numero di likes nel database
 // $arrayAssociativoCommenti=[]; //da cambiare con i dati per i commenti nel database
 // $posizioneImmagineProfilo = "immagine profilo"; //da cambiare con il percorso dell'immagine profilo dell'utente
 
-$y=1;
+for($y=1; $y<=$numeroMemes; $y++){ //per ogni meme
 
-foreach($file as $meme){ //per ogni meme
+    $queryPercorso = "SELECT percorso FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
+    $nomeFile = $conn->query($queryPercorso);
+    $meme = $folder.$nomeFile;
 
     $queryLikes = "SELECT likes FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
     $numeroLikes = $conn->query($queryLikes);
 
     $queryNome = "SELECT titolo FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
     $nomefile = $conn->query($queryNome);
-    $y++;
 
     echo '<div class="meme">
       <h2>'.$nomefile./*da cambiare con il nome meme nel database*/'</h2>
@@ -59,18 +65,5 @@ foreach($file as $meme){ //per ogni meme
           </div>
         </div>
         </div>'
-  //;
-  //commenti
-  // foreach($arrayAssociativoCommenti=[/*testo_commento*/] as $commento){ //per ogni commento
-  //   echo'
-  //   <div id="commento_postato">
-  //     <figure><img src="'.$posizioneImmagineProfilo.'" alt=""></figure> 
-  //     <div>
-  //       <p>'.$arrayAssociativoCommenti=[/*nome_utente*/].'</p>
-  //       <p>'.$commento.'</p> 
-  //     </div>
-  //   </div>
-  //    ';} 
-  // echo'
-;}
+  ;}
 
