@@ -24,7 +24,9 @@ if ($conn->connect_error) {
 $conn->select_db("sito_meme");
 
 $queryCount="SELECT COUNT(id_img) FROM immagini";
-$numeroMemes = $conn->query($queryCount);
+$oggettoCount = $conn->query($queryCount);
+$numeroMemes = $oggettoCount['num_rows'];
+
 
 var_dump($numeroMemes);
 //temporaneo Dati
