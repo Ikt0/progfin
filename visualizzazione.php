@@ -1,6 +1,6 @@
 <?php
 
-// $folder = ".\images\\";
+$folder = ".\images\\";
 // $file = glob($folder . "*.{jpg,jpeg,png,gif}",GLOB_BRACE);
 
 //DB
@@ -33,7 +33,8 @@ $numeroMemes = $conn->query($queryCount);
 for($y=1; $y<=$numeroMemes; $y++){ //per ogni meme
 
     $queryPercorso = "SELECT percorso FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
-    $meme = $conn->query($queryPercorso);
+    $nomeFile = $conn->query($queryPercorso);
+    $meme = $folder.$nomeFile;
 
     $queryLikes = "SELECT likes FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
     $numeroLikes = $conn->query($queryLikes);
