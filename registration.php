@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'sito_meme';
 $username = 'root';
-$password = '1234';
+$password = '12345';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
