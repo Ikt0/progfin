@@ -43,6 +43,7 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
                 } else {
                 ?>                
                 <a href="../templates/Registrazione.html"><i class="fa fa-user"></i> Registrati</a>
+                <a href="../templates/veroLogin.html"><i class="fa fa-user"></i> Login</a>
                 <?php
                 }
                 ?>
