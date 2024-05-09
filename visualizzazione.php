@@ -25,6 +25,8 @@ $conn->select_db("sito_meme");
 
 $queryCount="SELECT COUNT(id_img) FROM immagini";
 $numeroMemes = $conn->query($queryCount);
+
+var_dump($numeroMemes);
 //temporaneo Dati
 // $numeroLikes = 1234; //da cambiare con il numero di likes nel database
 // $arrayAssociativoCommenti=[]; //da cambiare con i dati per i commenti nel database
