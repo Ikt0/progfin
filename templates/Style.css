@@ -18,6 +18,7 @@ body {
   max-width: 50%;
   height: auto;
   border-radius:15px;
+margin-right: 0;
 }
 
 
@@ -211,7 +212,7 @@ input[type="submit"]:hover {
   height: auto;
 }
 
-/*footer*/
+
 input::file-selector-button {
   font-weight: bold;
   color: black;
@@ -220,6 +221,18 @@ input::file-selector-button {
   border: thin solid grey;
   border-radius: 3px;
 }
+
+/*footer*/
+footer {
+  width: auto;
+  background-color:#ff6b6b;
+  color: white;
+  text-align: center;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 footer p{
   font-size:30px ;
   transition: 1s ease-in-out;
