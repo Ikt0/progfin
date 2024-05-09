@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="uploadStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img class="logo" src="PlaceHolder.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input class="search-input" type="text" placeholder="Search...">
+            <button class="search-button"><i class="fa fa-search"></i> </button>
+        </div>
+        <div class="hamburger-menu">
+            <div class="bordermenu">
+                <p><i class="fa fa-bars" aria-hidden="true"></i></p>
+            </div>
+            <div class="dropdown-menu">
+                <a href="#"><i class="fa fa-user"></i> Area Personale</a>
+                <a href="#"><i class="fa fa-object-group" aria-hidden="true"></i>I miei Memes</a>
+                <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="sec">
+        <div>
+            <form action="login.php" method="post">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="Login" name="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

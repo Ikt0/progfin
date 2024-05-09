@@ -9,6 +9,16 @@
     <title>Index</title>
 </head>
 
+<?php
+session_start();
+
+if(isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
+    $isLoggedIn = true;
+} else {
+    $isLoggedIn = false;
+}
+?>
+
 <body>
     <div class="header">
         <div class="logo-container">
@@ -24,10 +34,18 @@
             </div>
 
             <div class="dropdown-menu">
+                <?php 
+                if(!$isLoggedIn) { ?>
+                    <a href="../templates/ImieiMemes"><i class="fa fa-object-group" aria-hidden="true"></i> I miei Memes</a>
+                    <a href="../templates/Upload.html"><i class="fa fa-upload" aria-hidden="true"> Upload</i></a>
+                    <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                <?php
+                } else {
+                ?>                
                 <a href="../templates/Registrazione.html"><i class="fa fa-user"></i> Registrati</a>
-                <a href="../templates/ImieiMemes"><i class="fa fa-object-group" aria-hidden="true"></i> I miei Memes</a>
-                <a href="../templates/Upload.html"><i class="fa fa-upload" aria-hidden="true"> Upload</i></a>
-                <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </div>
