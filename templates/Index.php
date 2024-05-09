@@ -53,6 +53,7 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
     <?php include '..\visualizzazione.php';?>
 </div>
 </body>
+
 <footer>
         <p id="Company">©Grande Memes Company 2024</p>
         <p><i class="fa fa-facebook" aria-hidden="true"></i></p>

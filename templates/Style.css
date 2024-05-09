@@ -212,6 +212,7 @@ input[type="submit"]:hover {
   height: auto;
 }
 
+<<<<<<< HEAD
 
 input::file-selector-button {
   font-weight: bold;
@@ -220,6 +221,18 @@ input::file-selector-button {
   background: linear-gradient(135deg, #ff9248, #ff6b6b);
   border: thin solid grey;
   border-radius: 3px;
+=======
+/*footer*/
+footer {
+  width: auto;
+  background-color:#ff6b6b;
+  color: white;
+  text-align: center;
+  display:flex;
+  align-items: center;
+
+  justify-content: space-between;
+>>>>>>> 19334bcfe2b029178cd406f7000ed61fc3426a1d
 }
 
 /*footer*/

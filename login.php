@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'sito_meme';
 $username = 'root';
-$password = '1234';
+$password = '12345';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt = $pdo->prepare("SELECT * FROM utenti WHERE username = ?");
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
