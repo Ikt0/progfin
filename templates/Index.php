@@ -55,12 +55,21 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 </body>
 
 <footer>
-        <p id="Company">©Grande Memes Company 2024</p>
+<div class="row">
+  <div class="columnc">
+  <p id="Company">©Grande Memes Company 2024</p>
+  </div>
+  <div class="columnI">
         <p><i class="fa fa-facebook" aria-hidden="true"></i></p>
-        <p><i class="fa fa-twitch" aria-hidden="true"></i></p>
-        <p><i class="fa fa-instagram" aria-hidden="true"></i></p>
-        <p><i class="fa fa-whatsapp" aria-hidden="true"></i></p>
         <p><i class="fa fa-telegram" aria-hidden="true"></i></p>
+        <p><i class="fa fa-instagram" aria-hidden="true"></i></p>
         <a href="https://github.com/Ikt0/progfin"><p><i class="fa fa-github" aria-hidden="true"></i></p></a>
+  </div>
+  
+  <div class="columnf">
+  <p>What is a meme? <i class="fa fa-question-circle" aria-hidden="true"></i></p>
+  </div>
+</div>
+        
 </footer>
 </html>
