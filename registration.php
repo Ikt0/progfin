@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     // check existing username
-    $stmt = $pdo->prepare("SELECT * FROM utenti WHERE username = ?");
+    $stmt = $pdo->prepare("SELECT * FROM utenti WHERE nome = ?");
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
