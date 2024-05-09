@@ -6,7 +6,7 @@ Portale di condivisione Memes
 
 - [@Lorenzo Limatola](https://www.github.com/ikt0)
 - [@Lorenzo Marino](https://www.github.com/)
-- [@Mattia Capasso](https://www.github.com/)
+- [@Mattia Capasso](https://github.com/MattiaCapassoITS)
 - [@Luca De Sio](https://www.github.com/)
 - [@Giovanni Ferrante](https://www.github.com/)
 - [@Pietro Vergara](https://www.github.com/)
