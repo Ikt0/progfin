@@ -212,3 +212,28 @@ input[type="submit"]:hover {
   max-width: 100%;
   height: auto;
 }
+
+/*footer*/
+
+footer p{
+  font-size:30px ;
+  transition: 1s ease-in-out;
+}
+
+footer #Company
+{
+font-size: 16px;
+}
+
+footer i:hover
+{
+  transition: 1s ease-in-out;
+  color: #ffaf40;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color:white;
+}

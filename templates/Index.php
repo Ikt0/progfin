@@ -35,5 +35,13 @@
     <?php include '..\visualizzazione.php';?>
 </div>
 </body>
-
+<footer>
+        <p id="Company">©Grande Memes Company 2024</p>
+        <p><i class="fa fa-facebook" aria-hidden="true"></i></p>
+        <p><i class="fa fa-twitch" aria-hidden="true"></i></p>
+        <p><i class="fa fa-instagram" aria-hidden="true"></i></p>
+        <p><i class="fa fa-whatsapp" aria-hidden="true"></i></p>
+        <p><i class="fa fa-telegram" aria-hidden="true"></i></p>
+        <a href="https://github.com/Ikt0/progfin"><p><i class="fa fa-github" aria-hidden="true"></i></p></a>
+</footer>
 </html>
