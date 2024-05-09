@@ -35,7 +35,7 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 
             <div class="dropdown-menu">
                 <?php 
-                if(!$isLoggedIn) { ?>
+                if($isLoggedIn) { ?>
                     <a href="../templates/ImieiMemes"><i class="fa fa-object-group" aria-hidden="true"></i> I miei Memes</a>
                     <a href="../templates/Upload.html"><i class="fa fa-upload" aria-hidden="true"> Upload</i></a>
                     <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
