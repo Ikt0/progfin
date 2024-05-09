@@ -15,9 +15,14 @@ body {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 50%;
   height: auto;
+  border-radius:15px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
+
+
 
 .search-bar {
   display: flex;
