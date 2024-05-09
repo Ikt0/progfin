@@ -5,7 +5,7 @@ Portale di condivisione Memes
 ## Autori
 
 - [@Lorenzo Limatola](https://www.github.com/ikt0)
-- [@Lorenzo Marino](https://www.github.com/)
+- [@Lorenzo Marino](https://www.github.com/LorITS05)
 - [@Mattia Capasso](https://github.com/MattiaCapassoITS)
 - [@Luca De Sio](https://www.github.com/)
 - [@Giovanni Ferrante](https://www.github.com/)
