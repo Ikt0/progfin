@@ -210,6 +210,7 @@ input[type="submit"]:hover {
   max-width: 100%;
   height: auto;
 }
+<<<<<<< HEAD
 input::file-selector-button {
   font-weight: bold;
   color: black;
@@ -217,4 +218,30 @@ input::file-selector-button {
   background: linear-gradient(135deg, #ff9248, #ff6b6b);
   border: thin solid grey;
   border-radius: 3px;
+=======
+
+/*footer*/
+
+footer p{
+  font-size:30px ;
+  transition: 1s ease-in-out;
+}
+
+footer #Company
+{
+font-size: 16px;
+}
+
+footer i:hover
+{
+  transition: 1s ease-in-out;
+  color: #ffaf40;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color:white;
+>>>>>>> b6eddccc227249e395f3bfaafb3230fe476a2f8b
 }
