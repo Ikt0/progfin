@@ -23,14 +23,14 @@
             </div>
         </div>
         <div id="comment">
-            <figure><img src="../images/uomodicoloremelone.jpg" alt=""></figure> 
+            <figure><img src="../images/uomoanguria.jpg" alt=""></figure> 
             <div>
                 <p>nome</p>
                 <p>sgdfhgasr asjrhkjasrh kjahrkjlah kjarh kajrh arh </p>
             </div>
         </div>
         <div id="comment">
-            <figure><img src="../images/uomodicoloremelone.jpg" alt=""></figure> 
+            <figure><img src="../images/uomoanguria.jpg" alt=""></figure> 
             <div>
                 <p>nome</p>
                 <p>ajfh afjhkajfh aiufdhf aioufhiuaf rhiluarh iaruh</p>
