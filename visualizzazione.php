@@ -1,6 +1,6 @@
 <?php
 
-$folder = ".\images\\";
+$folder = "..\images\\";
 // $file = glob($folder . "*.{jpg,jpeg,png,gif}",GLOB_BRACE);
 
 //DB
@@ -21,34 +21,34 @@ try {
   die("Connection failed: " . $e->getMessage());
 }
 
-session_start();
+// session_start();
 
 $queryCount="SELECT COUNT(id_img) FROM immagini";
 $oggettoCount = $pdo->query($queryCount);
 $numeroMemes = $oggettoCount->rowCount();
 
-var_dump($oggettoCount);
-var_dump($numeroMemes);
-//temporaneo Dati
-// $numeroLikes = 1234; //da cambiare con il numero di likes nel database
-// $arrayAssociativoCommenti=[]; //da cambiare con i dati per i commenti nel database
-// $posizioneImmagineProfilo = "immagine profilo"; //da cambiare con il percorso dell'immagine profilo dell'utente
-
 for($y=1; $y<=$numeroMemes; $y++){ //per ogni meme
 
-    $queryPercorso = "SELECT percorso FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
-    $nomeFile = $pdo->query($queryPercorso);
+    $queryPercorso = "SELECT percorso FROM immagini WHERE id_img = :id";
+    $stmt = $pdo->prepare($queryPercorso);
+    $stmt->execute(['id' => $y]);
+    $nomeFile = $stmt->fetch(PDO::FETCH_ASSOC)['percorso'];
+    // var_dump($nomeFile);
     $meme = $folder.$nomeFile;
+    // var_dump($meme);
 
-    $queryLikes = "SELECT likes FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
-    $numeroLikes = $pdo->query($queryLikes);
+    $queryLikes = "SELECT likes FROM immagini WHERE id_img = $y";
+    $stmt = $pdo->query($queryLikes);
+    $numeroLikes = $stmt->fetch(PDO::FETCH_ASSOC)['likes'];
+    // var_dump($numeroLikes);
 
-    $queryNome = "SELECT titolo FROM immagini WHERE id_img = $y"; //da cambiare con l'id del meme
-    $nomefile = $pdo->query($queryNome);
+    $queryNome = "SELECT titolo FROM immagini WHERE id_img = $y";
+    $stmt = $pdo->query($queryNome);
+    $titolo = $stmt->fetch(PDO::FETCH_ASSOC)['titolo'];
 
     echo '<div class="meme">
-      <h2>'.$nomefile./*da cambiare con il nome meme nel database*/'</h2>
-      <figure><img src="'.$meme.'" alt="'.$nomefile.'"></figure>
+      <h2>'.$titolo.'</h2>
+      <figure><img src="'.$meme.'" alt="'.$nomeFile.'"></figure>
         <div id="area">
           <div id="like">
             <button>
@@ -66,4 +66,3 @@ for($y=1; $y<=$numeroMemes; $y++){ //per ogni meme
         </div>
         </div>'
   ;}
-
