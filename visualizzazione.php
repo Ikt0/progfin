@@ -35,21 +35,23 @@ $idsImgs = $stmt->fetchAll(PDO::FETCH_COLUMN);
 foreach($idsImgs as $idImg){
   // echo $idImg."<br>";
 
-    $queryPercorso = "SELECT percorso FROM immagini WHERE id_img = $idImg";
+    $queryPercorso = "SELECT * FROM immagini WHERE id_img = $idImg";
+    //chiamata percorso
     $stmt = $pdo->query($queryPercorso);
     $nomeFile = $stmt->fetch(PDO::FETCH_ASSOC)['percorso'];
     $meme = $folder.$nomeFile;
-    // var_dump($nomeFile);
-    // var_dump($meme);
-
-    $queryLikes = "SELECT likes FROM immagini WHERE id_img = $idImg";
-    $stmt = $pdo->query($queryLikes);
+    //chiamata likes
+    $stmt = $pdo->query($queryPercorso);
     $numeroLikes = $stmt->fetch(PDO::FETCH_ASSOC)['likes'];
-    // var_dump($numeroLikes);
-
-    $queryNome = "SELECT titolo FROM immagini WHERE id_img = $idImg";
-    $stmt = $pdo->query($queryNome);
+    //chiamata titolo
+    $stmt = $pdo->query($queryPercorso);
     $titolo = $stmt->fetch(PDO::FETCH_ASSOC)['titolo'];
+
+    //test
+    // var_dump($nomeFile); echo "<br>";
+    // var_dump($meme); echo "<br>";
+    // var_dump($numeroLikes); echo "<br>";
+    // var_dump($titolo); echo "<br>";
 
     echo '<div class="meme">
       <h2>'.$titolo.'</h2>
