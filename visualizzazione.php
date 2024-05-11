@@ -21,28 +21,33 @@ try {
   die("Connection failed: " . $e->getMessage());
 }
 
-// session_start();
-
-$queryCount="SELECT COUNT(id_img) FROM immagini";
+$queryCount="SELECT id_img FROM immagini";
 $oggettoCount = $pdo->query($queryCount);
+// var_dump($oggettoCount); echo "<br>";
 $numeroMemes = $oggettoCount->rowCount();
+// var_dump($numeroMemes); echo "<br>";
 
-for($y=1; $y<=$numeroMemes; $y++){ //per ogni meme
+$idsImgs = array();
+$stmt = $pdo->query($queryCount);
+$idsImgs = $stmt->fetchAll(PDO::FETCH_COLUMN);
+// var_dump($idsImg); echo "<br>";
 
-    $queryPercorso = "SELECT percorso FROM immagini WHERE id_img = :id";
-    $stmt = $pdo->prepare($queryPercorso);
-    $stmt->execute(['id' => $y]);
+foreach($idsImgs as $idImg){
+  // echo $idImg."<br>";
+
+    $queryPercorso = "SELECT percorso FROM immagini WHERE id_img = $idImg";
+    $stmt = $pdo->query($queryPercorso);
     $nomeFile = $stmt->fetch(PDO::FETCH_ASSOC)['percorso'];
-    // var_dump($nomeFile);
     $meme = $folder.$nomeFile;
+    // var_dump($nomeFile);
     // var_dump($meme);
 
-    $queryLikes = "SELECT likes FROM immagini WHERE id_img = $y";
+    $queryLikes = "SELECT likes FROM immagini WHERE id_img = $idImg";
     $stmt = $pdo->query($queryLikes);
     $numeroLikes = $stmt->fetch(PDO::FETCH_ASSOC)['likes'];
     // var_dump($numeroLikes);
 
-    $queryNome = "SELECT titolo FROM immagini WHERE id_img = $y";
+    $queryNome = "SELECT titolo FROM immagini WHERE id_img = $idImg";
     $stmt = $pdo->query($queryNome);
     $titolo = $stmt->fetch(PDO::FETCH_ASSOC)['titolo'];
 
@@ -64,5 +69,5 @@ for($y=1; $y<=$numeroMemes; $y++){ //per ogni meme
             </form>
           </div>
         </div>
-        </div>'
+      </div>'
   ;}
